@@ -1,0 +1,6 @@
+aaron_*
+results/
+toy/
+logs/
+*.zip
+__pycache__/

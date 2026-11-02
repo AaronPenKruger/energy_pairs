@@ -72,3 +72,15 @@ The energy-resolved curve should rise earlier.
 - Truth information (component labels, source IDs, true errors) informs this reasoning only. It never
   enters either score.
 - Numbers are development diagnostics, not calibrated results.
+
+## Addendum (2026-11-02, after receiving dev skies 55289, 192235, 3332; before any score design)
+
+- Dev skies are not matched: totals range 3,592-6,186 events, astro counts 47-169, and M1 differs.
+  Sky-to-sky differences cannot be attributed to g_comp alone.
+- Energy contrast varies by sky. Astro fraction above channel 0: ~17% (55289), ~40% (192235),
+  ~11% (3332), vs ~8% for atmo. Where astro events are nearly as soft as atmo (55289, 3332),
+  I expect little or no energy-resolved gain regardless of g_comp. 192235 is the dev sky where
+  energy information has the best chance to matter.
+- First pooled look: 3332 (bright sources of 43, 24, 20 events) is far above its null;
+  55289 and 192235 are consistent with their nulls in pooled and per-channel-pair counts.
+  Real small multiplets look weaker than in the toy skies.

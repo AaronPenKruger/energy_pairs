@@ -1,0 +1,160 @@
+{
+  "check": "step1_numerical_handoff",
+  "thresholds_deg": [
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    5.0
+  ],
+  "draw_row_direct_check": 0,
+  "software": {
+    "python": "3.13.18",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pair_counter_sha256": "1a2b3b03120cc0cdafc7856a86c85c5f72101af7db453d07ca913d1a8b126888"
+  },
+  "skies": {
+    "26392": {
+      "n_events": 3760,
+      "seed": 20261003,
+      "n_null": 1000,
+      "event_inventory_sha256": "ce133dee00e7beaebaf701fe6a337208196e614e20fc7bcab7b3da354695b451",
+      "A_regenerated_equals_saved_npy": "npy not present here (regenerated from seed)",
+      "B_obs_equals_saved": true,
+      "B_nulls_equal_saved": 1000,
+      "C_sum15_equals_pooled_all_thresholds": true,
+      "pooled_obs": [
+        412,
+        1556,
+        6093,
+        13560,
+        36447
+      ],
+      "D_direct_equals_counter_obs": true,
+      "D_direct_equals_counter_draw": true,
+      "D_pooled_direct_draw": [
+        413,
+        1595,
+        6161,
+        13608,
+        36309
+      ],
+      "PASS": true,
+      "runtime_s": 8.2
+    },
+    "14265": {
+      "n_events": 3760,
+      "seed": 20261003,
+      "n_null": 1000,
+      "event_inventory_sha256": "3b4e9a508b637c6e71ee5821454ae1487e30e751eba44572fb77f112dbea743c",
+      "A_regenerated_equals_saved_npy": "npy not present here (regenerated from seed)",
+      "B_obs_equals_saved": true,
+      "B_nulls_equal_saved": 1000,
+      "C_sum15_equals_pooled_all_thresholds": true,
+      "pooled_obs": [
+        1724,
+        3385,
+        8798,
+        16379,
+        39119
+      ],
+      "D_direct_equals_counter_obs": true,
+      "D_direct_equals_counter_draw": true,
+      "D_pooled_direct_draw": [
+        409,
+        1586,
+        6278,
+        13618,
+        36078
+      ],
+      "PASS": true,
+      "runtime_s": 7.9
+    },
+    "55289": {
+      "n_events": 3592,
+      "seed": 20316292,
+      "n_null": 1000,
+      "event_inventory_sha256": "7de7b1d9a2e72cf1b62ec0180e4359c38cb1b3b7284a2870afa565444ba80f70",
+      "A_regenerated_equals_saved_npy": "npy not present here (regenerated from seed)",
+      "B_obs_equals_saved": true,
+      "B_nulls_equal_saved": 1000,
+      "C_sum15_equals_pooled_all_thresholds": true,
+      "pooled_obs": [
+        352,
+        1441,
+        5470,
+        12018,
+        32576
+      ],
+      "D_direct_equals_counter_obs": true,
+      "D_direct_equals_counter_draw": true,
+      "D_pooled_direct_draw": [
+        386,
+        1449,
+        5566,
+        12187,
+        32822
+      ],
+      "PASS": true,
+      "runtime_s": 7.4
+    },
+    "192235": {
+      "n_events": 4324,
+      "seed": 20453238,
+      "n_null": 1000,
+      "event_inventory_sha256": "5f5b33830ef6d0de1301b8453a98912cfbf3e0f807ee07070a282b32a77b235d",
+      "A_regenerated_equals_saved_npy": "npy not present here (regenerated from seed)",
+      "B_obs_equals_saved": true,
+      "B_nulls_equal_saved": 1000,
+      "C_sum15_equals_pooled_all_thresholds": true,
+      "pooled_obs": [
+        498,
+        2009,
+        7966,
+        17564,
+        47353
+      ],
+      "D_direct_equals_counter_obs": true,
+      "D_direct_equals_counter_draw": true,
+      "D_pooled_direct_draw": [
+        513,
+        1988,
+        7953,
+        17707,
+        47532
+      ],
+      "PASS": true,
+      "runtime_s": 10.3
+    },
+    "3332": {
+      "n_events": 6186,
+      "seed": 20264335,
+      "n_null": 1000,
+      "event_inventory_sha256": "2f22c45aa15a4eb75e53940dc007a5aa393297f104ab6fe35e3984af792738c9",
+      "A_regenerated_equals_saved_npy": "npy not present here (regenerated from seed)",
+      "B_obs_equals_saved": true,
+      "B_nulls_equal_saved": 1000,
+      "C_sum15_equals_pooled_all_thresholds": true,
+      "pooled_obs": [
+        1411,
+        4674,
+        16985,
+        36755,
+        97248
+      ],
+      "D_direct_equals_counter_obs": true,
+      "D_direct_equals_counter_draw": true,
+      "D_pooled_direct_draw": [
+        1026,
+        4161,
+        16242,
+        35842,
+        96754
+      ],
+      "PASS": true,
+      "runtime_s": 17.9
+    }
+  },
+  "ALL_PASS": true
+}

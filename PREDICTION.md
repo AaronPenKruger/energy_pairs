@@ -84,3 +84,18 @@ The energy-resolved curve should rise earlier.
 - First pooled look: 3332 (bright sources of 43, 24, 20 events) is far above its null;
   55289 and 192235 are consistent with their nulls in pooled and per-channel-pair counts.
   Real small multiplets look weaker than in the toy skies.
+
+## Addendum 2 (2026-11-09, after freezing scores v1 on the 5 dev skies; before any calibration or held-out scoring)
+
+Frozen config: `frozen/score_config.json`, sha256 6e7dc3ab4281... Written after seeing development scores
+(results/dev_scores.json), so this is a prediction about *independent* data only.
+
+What the dev skies showed (development diagnostic, not evidence of an energy advantage):
+- 14265 (one 85-event source): both scores far above null; energy higher (97 vs 67), driven by the merged sparse cell (z = 75 at 0.5 deg).
+- 3332 (bright, soft sources): both far above null; pooled higher (11.4 vs 7.7). The excess sits in (0,0) and (0,2); equal weighting dilutes it.
+- 26392, 55289, 192235: both scores consistent with their development nulls. The intermediate skies give no information about an energy gain.
+
+Predictions Linh's independent work can falsify:
+- P1 (calibration, smooth skies): with B = 199 and 5% threshold, each score's one-sided 97.5% upper bound on the false-alarm rate is below 10%. The energy score is not more tie-prone than pooled (dev nulls: 0 ties with the observed energy score on all 5 skies).
+- P2 (later held-out evaluation, only if approved): among skies detected by exactly one method, skies detected only by pooled have a larger share of same-source pairs in (0,0) than skies detected only by energy. If energy-only detections are not enriched in pairs involving channels >= 1, the energy score is not using energy the way I claim.
+- P3 (held-out): for skies whose astro events are nearly as soft as atmospheric (astro fraction above channel 0 below ~15%), pooled detects at least as often as energy.

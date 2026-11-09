@@ -53,3 +53,6 @@ The toy's null pair density is within about 3% of the real dev skies at every th
 - Not yet compared against the old `dfe378f` pair-count code. Do this when Linh's Git bundle arrives.
 - The pooled-count table printed by `run_pair_counts.py` is a development diagnostic on exposed skies.
   It is not a calibrated result.
+
+## Scores v1 (2026-11-09)
+See `HANDOFF_scores_v1.md`. Frozen config in `frozen/`, score code in `code/clustering_scores.py`.

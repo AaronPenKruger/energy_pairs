@@ -1,0 +1,37 @@
+{
+  "26392": {
+    "n_astro": 66,
+    "same_src_pairs": 1,
+    "same_src_pairs_above_00": 1,
+    "largest_source_events": 2,
+    "largest_source_pair_share": 1.0
+  },
+  "55289": {
+    "n_astro": 83,
+    "same_src_pairs": 6,
+    "same_src_pairs_above_00": 5,
+    "largest_source_events": 3,
+    "largest_source_pair_share": 0.5
+  },
+  "192235": {
+    "n_astro": 47,
+    "same_src_pairs": 6,
+    "same_src_pairs_above_00": 3,
+    "largest_source_events": 4,
+    "largest_source_pair_share": 0.5
+  },
+  "3332": {
+    "n_astro": 169,
+    "same_src_pairs": 352,
+    "same_src_pairs_above_00": 33,
+    "largest_source_events": 43,
+    "largest_source_pair_share": 0.5227272727272727
+  },
+  "14265": {
+    "n_astro": 86,
+    "same_src_pairs": 1299,
+    "same_src_pairs_above_00": 564,
+    "largest_source_events": 85,
+    "largest_source_pair_share": 1.0
+  }
+}

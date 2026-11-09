@@ -1,0 +1,41 @@
+{
+  "seed": 7503,
+  "n_total": 3760,
+  "n_astro": 80,
+  "f_multiplet": 1.0,
+  "multiplet_size": 3,
+  "astro_psf_sigma_deg": 0.34,
+  "atmo_channel_frac": [
+    0.925,
+    0.071,
+    0.0035,
+    0.0005,
+    0.0
+  ],
+  "astro_channel_frac": [
+    0.63,
+    0.28,
+    0.072,
+    0.013,
+    0.005
+  ],
+  "kind": "TOY synthetic sky (not the IceCube simulator)",
+  "n_multiplet_sources": 26,
+  "n_astro_in_multiplets": 78,
+  "dec_min_deg": 5.0,
+  "sin_dec_weights": [
+    1863,
+    1324,
+    1101,
+    931,
+    642,
+    537,
+    485,
+    357,
+    280
+  ],
+  "global_sim_id": 900003,
+  "method": "uniform-full-ra (Linh draw_uniform_ra)",
+  "n_scrambles": 200,
+  "n_events": 3760
+}

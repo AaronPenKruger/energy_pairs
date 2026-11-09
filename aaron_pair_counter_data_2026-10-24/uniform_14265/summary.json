@@ -1,0 +1,22 @@
+{
+  "analysis_mode": "combined",
+  "detector_period_ra_multiset_preserved": null,
+  "fixed_ra_unchanged": true,
+  "global_sim_id": 14265,
+  "method": "uniform-full-ra",
+  "n_astro_events": 86,
+  "n_atmo_events": 3674,
+  "n_events": 3760,
+  "n_fixed_events": 0,
+  "n_scrambled_events": 3760,
+  "n_scrambles": 1000,
+  "non_ra_event_inventory_preserved": true,
+  "period_counts": {
+    "IC40": 631,
+    "IC59": 1549,
+    "IC79": 118,
+    "IC86": 1462
+  },
+  "seed": 20261003,
+  "uniform_ra_values_valid": true
+}

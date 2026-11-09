@@ -1,0 +1,140 @@
+{
+  "handoff": "conditional_ra_null_sampler",
+  "date": "2026-10-21",
+  "git": {
+    "commit": "bac169d",
+    "branch": "analysis/scrambling-background",
+    "commit_message": "Add independent uniform RA conditional null sampler"
+  },
+  "scientific_ownership": {
+    "linh": [
+      "conditional null sampler",
+      "calibration",
+      "split and seed record",
+      "joint evaluation and background sensitivity"
+    ],
+    "aaron": [
+      "pair counting",
+      "pooled score construction",
+      "energy-resolved score construction",
+      "physical interpretation"
+    ]
+  },
+  "frozen_h1_setup": {
+    "analysis_dec_min_deg": 5.0,
+    "source_roi_dec_min_deg": 5.0,
+    "source_generation_dec_min_deg": -5.0,
+    "atmosphere_generation_dec_min_deg": -5.0,
+    "nside": 128,
+    "reconstructed_energy_edges_GeV": [
+      10000.0,
+      39810.71705534969,
+      158489.3192461114,
+      630957.344480193,
+      2511886.4315095823,
+      10000000.0
+    ],
+    "response_physics_hash": "30475bb70f21eff54f9539d00a506bec71db9571df18d5906b0581d346c8d9c7",
+    "production_model_hash": "be8827c5c69c228a015f1eb96e7957ccbac4996f64cfbd938a074fd197c5515c"
+  },
+  "primary_conditional_null": {
+    "method": "uniform-full-ra",
+    "analysis_mode": "combined",
+    "ra_distribution": "independent_uniform_full_circle",
+    "ra_range_deg": [
+      0.0,
+      360.0
+    ],
+    "event_treatment": "all mixed-sky events are randomized identically",
+    "preserved_marks": [
+      "reco_dec_deg",
+      "reco_log10_energy",
+      "reco_energy_channel",
+      "period",
+      "angular_uncertainty_deg",
+      "event_inventory"
+    ],
+    "period_interpretation": "detector period, not individual observing season",
+    "empirical_ra_distribution_used": false
+  },
+  "development_skies": {
+    "26392": {
+      "total_events": 3760,
+      "astro_events": 66,
+      "atmo_events": 3694,
+      "null_draws": 1000,
+      "seed": 20261003,
+      "status": "pass"
+    },
+    "14265": {
+      "total_events": 3760,
+      "astro_events": 86,
+      "atmo_events": 3674,
+      "null_draws": 1000,
+      "seed": 20261003,
+      "status": "pass"
+    }
+  },
+  "validation": {
+    "frozen_h1_response_and_footprint": {
+      "status": "pass",
+      "note": "Replay is tied to the frozen H1 bank, production model, recorded DR2 release identity, and response physics hash."
+    },
+    "ra_acceptance_justification": {
+      "status": "pass",
+      "note": "Frozen DR2 generation uses uniform true RA, azimuthally symmetric spherical smearing, and no RA-dependent production selection was found."
+    },
+    "analytic_concentrated_ra_test": {
+      "status": "pass",
+      "permutation_fraction_in_20_to_40_deg_window": 1.0,
+      "uniform_fraction_in_20_to_40_deg_window": 0.0543,
+      "analytic_uniform_expectation": 0.05555555555555555,
+      "mc_sigma_fraction": 0.00162
+    },
+    "frozen_mixed_sky_mark_preservation": {
+      "26392": "pass",
+      "14265": "pass"
+    },
+    "conditional_uniformity_by_detector_period": {
+      "26392": "pass",
+      "14265": "pass"
+    },
+    "conditional_uniformity_by_energy_channel": {
+      "26392": "pass",
+      "14265": "pass_with_sparse_channel_check"
+    },
+    "14265_sparse_channel_3_check": {
+      "events_per_sky": 2,
+      "total_draws": 2000,
+      "initial_max_bin_abs_z": 4.4,
+      "initial_high_bin_deg": [
+        30.0,
+        60.0
+      ],
+      "independent_seed_replication_max_bin_abs_z": 1.59,
+      "interpretation": "consistent with a finite Monte Carlo fluctuation; no persistent RA preference observed"
+    },
+    "independent_uniform_reference": "pass"
+  },
+  "existing_diagnostic_method": {
+    "method": "permute-within-period",
+    "role": "development diagnostic only",
+    "reason_not_primary": "it preserves and reuses the empirical RA values and can therefore inherit source structure"
+  },
+  "known_limitation": {
+    "independent_physical_smooth_control_skies": "not currently accessible",
+    "local_h0_material": "JSON evidence only",
+    "historical_h0_bank_access": "permission denied",
+    "impact": "sampler validation can be considered passed, but final 5 percent false-alarm calibration still requires an approved independent smooth/null control-sky set"
+  },
+  "aaron_next_action": {
+    "request": "Provide the frozen pooled and energy-resolved score callable, settings, and minimal interface for calibration.",
+    "linh_will_do": "Apply the same conditional-null and calibration procedure to both frozen scores."
+  },
+  "not_yet_established": [
+    "final 5 percent false-alarm calibration",
+    "final pooled-versus-energy-resolved sensitivity comparison",
+    "independent physical null-sky ensemble validation",
+    "final background-sensitivity result"
+  ]
+}

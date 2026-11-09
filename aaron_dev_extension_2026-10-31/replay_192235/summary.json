@@ -1,0 +1,22 @@
+{
+  "astro_event_count": 47,
+  "astro_event_map_match": true,
+  "astro_map_count": 47,
+  "atmo_event_count": 4277,
+  "atmo_event_map_match": true,
+  "atmo_map_count": 4277,
+  "atmosphere_seed": 2471729722,
+  "combined_frozen_map_match": true,
+  "combined_map_count": 4324,
+  "differing_frozen_pixels": 0,
+  "frozen_astro_count": 47,
+  "frozen_atmo_count": 4277,
+  "frozen_row_index": 245,
+  "frozen_total_count": 4324,
+  "global_sim_id": 192235,
+  "master_seed": 4698,
+  "response_physics_hash": "30475bb70f21eff54f9539d00a506bec71db9571df18d5906b0581d346c8d9c7",
+  "runtime_dr2_release_manifest_hash": "97e8d9362e3ebdc5fdd81d73deae4aadb878d0720f06ed43a47ee3aa64e4242e",
+  "source_seed": 2431687626,
+  "theta_seed": 54187249
+}

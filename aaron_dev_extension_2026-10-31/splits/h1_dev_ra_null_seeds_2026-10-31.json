@@ -1,0 +1,38 @@
+{
+  "split_record": "h1_dev_eval_split_2026-10-31.json",
+  "method": "uniform-full-ra",
+  "analysis_mode": "combined",
+  "development_null_runs": {
+    "26392": {
+      "seed": 20261003,
+      "n_events": 3760,
+      "n_scrambles": 1000,
+      "seed_policy": "original_fixed_seed"
+    },
+    "14265": {
+      "seed": 20261003,
+      "n_events": 3760,
+      "n_scrambles": 1000,
+      "seed_policy": "original_fixed_seed"
+    },
+    "55289": {
+      "seed": 20316292,
+      "n_events": 3592,
+      "n_scrambles": 1000,
+      "seed_policy": "20261003_plus_global_sim_id"
+    },
+    "192235": {
+      "seed": 20453238,
+      "n_events": 4324,
+      "n_scrambles": 1000,
+      "seed_policy": "20261003_plus_global_sim_id"
+    },
+    "3332": {
+      "seed": 20264335,
+      "n_events": 6186,
+      "n_scrambles": 1000,
+      "seed_policy": "20261003_plus_global_sim_id"
+    }
+  },
+  "note": "Original development nulls retained unchanged."
+}

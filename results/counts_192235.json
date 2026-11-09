@@ -1,0 +1,25 @@
+{
+  "global_sim_id": 192235,
+  "null_method": "uniform-full-ra",
+  "null_seed": 20453238,
+  "n_events": 4324,
+  "n_null_used": 1000,
+  "thresholds_deg": [
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    5.0
+  ],
+  "separation_rule": "pair counted if separation <= theta",
+  "fields_read": [
+    "reco_ra_deg",
+    "reco_dec_deg",
+    "reco_energy_channel"
+  ],
+  "inputs_sha256": {
+    "event_inventory.npz": "5f5b33830ef6d0de1301b8453a98912cfbf3e0f807ee07070a282b32a77b235d",
+    "scrambled_reco_ra_deg.npy": "bae684483e2b11b4ec7b6a7a830a65e0687c3a6a5475a6b74163ef398d08434d"
+  },
+  "runtime_s": 9.7
+}

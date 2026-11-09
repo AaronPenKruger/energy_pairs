@@ -9,3 +9,8 @@ __pycache__/
 *.zip
 __MACOSX/
 logs/
+*scrambled_reco_ra_deg.npy
+__pycache__/
+*.zip
+__MACOSX/
+logs/

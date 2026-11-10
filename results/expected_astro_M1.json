@@ -1,0 +1,18 @@
+{
+  "source": "oscar_analysis_progress_and_collaboration_2026-11-01.json :: development_sky_results[].M1_expected_astro",
+  "note": "Truth-side metadata; used only to annotate the figure, never by either score.",
+  "M1_expected_astro": {
+    "26392": 85.5,
+    "14265": 87.37,
+    "55289": 86.99,
+    "192235": 63.13,
+    "3332": 146.09
+  },
+  "realized_atmo_events": {
+    "26392": 3694,
+    "14265": 3674,
+    "55289": 3509,
+    "192235": 4277,
+    "3332": 6017
+  }
+}

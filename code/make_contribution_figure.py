@@ -13,7 +13,7 @@ source_index / component are read ONLY here, after scoring, to annotate which
 same-source pairs make the excess. They never enter either score.
 
 Usage: python code/make_contribution_figure.py --out figures/channel_contributions_dev.png \
-          [--expected-astro expected_astro.json]   # {"26392": 63.2, ...} if available
+          --expected-astro results/expected_astro_M1.json
 """
 import argparse, json, sys
 from pathlib import Path
@@ -67,7 +67,7 @@ def main():
     gcomp = json.loads(Path("aaron_dev_extension_2026-10-31/splits/h1_dev_eval_split_2026-10-31.json")
                        .read_text())["development_g_comp"]
     dev = json.loads(Path("results/dev_scores.json").read_text())["skies"]
-    expected = json.loads(a.expected_astro.read_text()) if a.expected_astro else {}
+    expected = json.loads(a.expected_astro.read_text())["M1_expected_astro"] if a.expected_astro else {}
 
     plt.rcParams.update({"font.size": 9, "axes.edgecolor": MUTED, "axes.labelcolor": INK,
                          "xtick.color": MUTED, "ytick.color": MUTED, "text.color": INK})
@@ -125,11 +125,11 @@ def main():
         ph = posthoc_same_source(sid, d, theta)
         notes[sid] = ph
         nch = np.bincount(ch, minlength=5)
-        exp_s = f"{expected[sid]:.0f}" if sid in expected else "n/a (to add)"
+        exp_s = f"{expected[sid]:.1f}" if sid in expected else "n/a (to add)"
         r = dev[sid]
         txt = (f"g_comp = {gcomp[sid]:.2f}\n"
-               f"expected astro count: {exp_s}\n"
-               f"events: {dec.size}  (astro {ph['n_astro']}, truth)\n"
+               f"expected astro (M1): {exp_s}\n"
+               f"events: {dec.size}  (realized astro {ph['n_astro']},\n         atmo {dec.size - ph['n_astro']}; truth)\n"
                f"per channel: {' / '.join(str(x) for x in nch)}\n\n"
                f"S_pool = {r['pooled']['S_obs']:.2f}  (dev p {r['pooled']['dev_p']:.3f})\n"
                f"S_E    = {r['energy']['S_obs']:.2f}  (dev p {r['energy']['dev_p']:.3f})\n\n"

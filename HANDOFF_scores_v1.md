@@ -42,20 +42,21 @@ which equal weighting dilutes, so pooled is higher. The price is that when the s
 weight on cells that do not respond. That is the trade-off Linh's independent evaluation should measure.
 
 ## 4. Development diagnostics (`results/dev_scores.json`, NOT calibrated)
-| sky | g_comp | S_pool (dev p) | S_E (dev p) |
-|---|---|---|---|
-| 26392 | 0.03 | 0.78 (0.564) | 0.18 (0.829) |
-| 55289 | 0.25 | 0.81 (0.526) | 0.51 (0.680) |
-| 192235 | 0.50 | -0.20 (0.915) | -0.60 (0.975) |
-| 3332 | 0.74 | 11.42 (0.001) | 7.68 (0.001) |
-| 14265 | 0.99 | 67.48 (0.001) | 97.32 (0.001) |
+| sky | g_comp | M1 expected astro | events (astro / atmo, realized) | S_pool (dev p) | S_E (dev p) |
+|---|---|---|---|---|---|
+| 26392 | 0.03 | 85.5 | 3760 (66 / 3694) | 0.78 (0.564) | 0.18 (0.829) |
+| 55289 | 0.25 | 87.0 | 3592 (83 / 3509) | 0.81 (0.526) | 0.51 (0.680) |
+| 192235 | 0.50 | 63.1 | 4324 (47 / 4277) | -0.20 (0.915) | -0.60 (0.975) |
+| 3332 | 0.74 | 146.1 | 6186 (169 / 6017) | 11.42 (0.001) | 7.68 (0.001) |
+| 14265 | 0.99 | 87.4 | 3760 (86 / 3674) | 67.48 (0.001) | 97.32 (0.001) |
 Dev nulls are development draws (26392/14265 share a seed). Null score distributions look alike across skies
 (mean 0.90-0.97, sd 0.82-0.90). No ties with the observed energy score. The dev skies are unmatched (astro counts and
-backgrounds differ); no sensitivity statement follows from them. Expected astrophysical counts per sky: to add from
-the Nov 1 record (`development_sky_results`); the figure uses realized truth counts until then.
+backgrounds differ); no sensitivity statement follows from them. M1 (expected astro) is from the Nov 1 record
+(`development_sky_results`), saved in `results/expected_astro_M1.json`; annotation only, never read by a score.
 
 ## 5. Figure
-`figures/channel_contributions_dev.png` (+ `.json` post-hoc truth notes). `source_index` used only after scoring.
+`figures/channel_contributions_dev.png` (+ `.json` post-hoc truth notes), made with
+`python code/make_contribution_figure.py --expected-astro results/expected_astro_M1.json`. `source_index` used only after scoring.
 
 ## 6. Frozen artifacts
 - `frozen/score_config.json` sha256 a96140b7866b07cc... (self-hash `config_sha256` 6e7dc3ab4281...)

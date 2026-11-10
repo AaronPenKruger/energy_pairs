@@ -79,3 +79,19 @@ once (cached per inventory); each extra draw ~8-18 ms.
 `python -m pytest -q code/` -> 24 passed (11 counter + 8 score + 5 synthetic/toy). Score tests cover config tamper guard,
 truth columns ignored, event-order invariance, original vs randomized inventory sharing the reference, reference
 reproducing frozen numbers, reference stream differing from null stream, calibration helper == score().
+
+## Addendum (2026-11-09, Polaris)
+- Historical-counter cross-check for 55289, 192235, 3332 (crosscheck_old_counter.py vs
+  scrambling_background analysis/scrambling-background scripts/analyze_ra_pair_counts.py):
+  1001/1001 identical per sky (observed + 1000 nulls), all 15 channel pairs and pooled. PASS.
+  With the earlier 26392/14265 check: all five dev skies agree exactly with the old counter.
+- On Polaris, step1_handoff_check.py check A (regenerated nulls == saved scrambled_reco_ra_deg.npy): True for all five skies.
+- pytest on Polaris (icecube_clean): 24 passed.
+
+## Addendum (2026-11-09, Polaris)
+- Historical-counter cross-check for 55289, 192235, 3332 (crosscheck_old_counter.py vs
+  scrambling_background analysis/scrambling-background scripts/analyze_ra_pair_counts.py):
+  1001/1001 identical per sky (observed + 1000 nulls), all 15 channel pairs and pooled. PASS.
+  With the earlier 26392/14265 check: all five dev skies agree exactly with the old counter.
+- On Polaris, step1_handoff_check.py check A (regenerated nulls == saved scrambled_reco_ra_deg.npy): True for all five skies.
+- pytest on Polaris (icecube_clean): 24 passed.
